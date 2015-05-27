@@ -1,0 +1,5 @@
+novaboot: Entering directory `/home/alex/nn/build'
+novaboot: Created hello.nulconfig
+novaboot: Created hello1.nulconfig
+novaboot: Created hello2.nulconfig
+novaboot: Running: 'qemu-system-x86_64' '-name' 'hello' '-cpu' 'coreduo' '-smp' '1' '-kernel' 'bin/apps/hypervisor' '-append' 'serial' '-initrd' 'bin/apps/sigma0.nul S0_DEFAULT verbose hostserial hostvga script_start:1+3 hostkeyb:0+0x60+1+12+2,bin/apps/hello.nul,hello.nulconfig,hello1.nulconfig,hello2.nulconfig' '-serial' 'stdio'

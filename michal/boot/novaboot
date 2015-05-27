@@ -30,7 +30,7 @@ $CFG::grub_keys = ''; #"/novaboot\n\n/\$NAME\n\n";
 $CFG::grub2_prolog = "  set root='(hd0,msdos1)'";
 $CFG::genisoimage = "genisoimage";
 $CFG::iprelay_addr = '141.76.48.80:2324'; #'141.76.48.252';
-$CFG::qemu = 'qemu';
+$CFG::qemu = 'qemu-system-x86_64';
 $CFG::script_modifier = ''; # Depricated, use --scriptmod commandline option or custom_options.
 @CFG::chainloaders = (); #('bin/boot/bender promisc');
 $CFG::pulsar_root = '';
@@ -39,7 +39,7 @@ $CFG::pulsar_mac = '52-54-00-12-34-56';
 		        'J' => '--server=rtime.felk.cvut.cz:/srv/tftp/novaboot --rsync-flags="--chmod=Dg+s,ug+w,o-w,+rX --rsync-path=\"umask 002 && rsync\"" --pulsar=novaboot --iprelay=147.32.86.92:2324');
 $CFG::scons = "scons -j2";
 
-my @qemu_flags = qw(-cpu coreduo -smp 2);
+my @qemu_flags = qw(-cpu coreduo -smp 1);
 sub read_config($) {
     my ($cfg) = @_;
     {
